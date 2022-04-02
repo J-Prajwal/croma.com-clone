@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="footer.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Mobile</title>
+  <link rel="stylesheet" href="mobile.css">
+  <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+  <style>
+    .fh {
+      font-weight: bolder;
+      margin-bottom: 40px;
+      margin-left: 0px;
+    }
+
+    #navbar1 {
+      height: 80px;
+      width: 100%;
+      /* border: 1px solid red; */
+      display: flex;
+      background-color: black;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    #navbar1>div {
+      height: 60%;
+      width: 40%;
+      /* border: 1px solid white; */
+      color: white;
+    }
+
+    #box1 {
+
+      display: flex;
+      gap: 20px;
+      margin-left: 50px;
+    }
+
+    #box1>div {
+      height: 100%;
+      width: 800px;
+      /* border: 1px solid white; */
+      color: white;
+      display: flex;
+    }
+
+    #menu1 {
+      z-index: 1000;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      height: 100%;
+      border: none;
+      font-size: 20px;
+      padding-top: 13px;
+    }
+
+    #video1 {
+      height: 100%;
+      width: 150px;
+
+    }
+
+    #search {
+      height: 100%;
+      width: 600px;
+      border-radius: 10px;
+      padding-left: 20px;
+      border: none;
+      text-decoration: none;
+
+    }
+
+    #box2 {
+      margin-left: 300px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    #box2>div {
+      /* border: 1px solid white; */
+      height: 100%;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    #map {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #map1 {
+      margin-right: 10px;
+    }
+
+    #pen {
+      margin-left: 10px;
+    }
+
+    #user {
+      margin-left: 50px;
+    }
+
+    #user>a {
+      text-decoration: none;
+      padding-right: 40px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    #cart:nth-child(2) {
+      text-decoration: none;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+
+    }
+
+    .dropbtn {
+      background-color: black;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+
+      min-width: 160px;
+      box-shadow: #e6f6f0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #e6f6f0;
+      color: #4dcaba;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+
+    #contents p {
+      word-spacing: 2px;
+      line-height: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 200;
+      padding: 3px;
+      font-size: 15px;
+    }
+
+    #contents {
+      border: 1px solid red;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar1">
+    <div id="box1">
+      <!-- <div><a href="/"><video id="video1"src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4" ></video></a></div> -->
+      <div>
+        <a class="logo custom-s logo croma-desktop-logo" data-testid="Logo" href="/index.html">
+          <video id="video1" controls autoplay loop muted>
+            <source
+              src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4"
+              type="video/mp4">
+            <source src="movie.mp4" type="video/mp4">
+
+          </video></a>
+
+      </div>
+      <div id="menu">
+
+        <a id="menu1" href=""><span><i class="fa-solid fa-bars"></i></a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content"
+            style="position: absolute; z-index: 999; overflow: scroll; height: 600px; width: 250px;">
+            <a href="mobile.html">Mobiles</a>
+            <a href="television.html">Televisions & Accessories</a>
+            <a href="">Laptops</a>
+            <a href="">Phones and Wearables</a>
+            <a href="">Kitchen Appliances</a>
+            <a href="">Audio & Fitness</a>
+            <a href="">Gromming & Personal Care</a>
+            <a href="">Cameras & Accessories</a>
+            <a href="">Smart Devices</a>
+            <a href="">Gaming</a>
+            <a href="">Acees sories</a>
+            <a href="">Top Brands</a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div><input id="search" type="search" placeholder="What are you looking for? "></div>
+    </div>
+    <div id="box2">
+      <div id="map">
+        <div id="map1"><i class="fa-solid fa-location-dot"></i></div>
+        <div> Mumbai,400049</div>
+        <div id="pen"><i class="fa-solid fa-pencil"></i></div>
+      </div>
+      <div id="user">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a id="cart" href="cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+
+
+    </div>
+  </div>
+  <hr/>
+  <p id="first"><a href="index.html" id="hcroma"> Croma </a><span id="span"><i class="fa-solid fa-angle-right"></i></span>Phones &
+    Wearables<span id="span"><i class="fa-solid fa-angle-right"></i></span><span id="boldmobilephone">Mobile
+      Phones</span></p>
+  <h1 id="mobph">Mobile Phones</h1>
+  <img id="center"
+    src="https://media.croma.com/image/upload/v1648531018/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_SmartphoneFest_29March2022_tdtaun.jpg" />
+  <img id="center2"
+    src="https://media.croma.com/image/upload/v1648531018/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_SingleSplit_Bank_SmartphoneFest_ICICI-HDFC_SBI_29March2022_osx92q.jpg" />
+  <div id="container1">
+    <div><img
+        src="https://media.croma.com/image/upload/v1648532404/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2split_smartphonefest_apple-12_29Mar_tfb4jb.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648532405/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2split_smartphonefest_mi-11xpro_29Mar_prairk.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_samsungMO2_29Mar_qadreo.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_nokia2-4_29Mar_yymecn.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_mi11x_29Mar_c07qzw.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648532405/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2split_smartphonefest_oppo-a15_29Mar_cw4h6f.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648532405/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2split_smartphonefest_realme-c25s_29Mar_wbm1t6.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_vivoy72_29Mar_seyr6t.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_oppof19_29Mar_zdbjxb.png" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1648527825/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/3split/2split_smartphonefest_samsungMO2s_29Mar_zmcqbx.png" />
+    </div>
+  </div>
+  <div id="container2">
+    <div><img
+        src="https://media.croma.com/image/upload/v1625301728/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/New_scwunn.jpg" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1625561994/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Popular_6July_hgjxqb.jpg" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1625561994/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/HotDeals_6July_ohu9jg.jpg" />
+    </div>
+    <div><img
+        src="https://media.croma.com/image/upload/v1625301728/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Deal_Junction_copy_to1tlz.jpg" />
+    </div>
+  </div>
+  <div id="carouselExampleCaptions " class="carousel slide carousel1" data-bs-ride="carousel">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648150482/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/MCP_S21_24March2022_o4wom0.jpg/mxw_1440,f_auto"
+            class="d-block w-100" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648219278/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_oneplus10pro_25March_aexiz4.png/mxw_1440,f_auto"
+            class="d-block w-100" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648277885/Croma%20Assets/CMS/LP%20Page%20Banners/2022/New%20Apple%20Devices%202021/BP_iPhone13_25March2022_glfhft.jpg/mxw_1440,f_auto"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+
+    <h1 id="aftercarousel">Croma Advantages</h1>
+    <div id="container3">
+      <div><img
+          src="https://media.croma.com/image/upload/v1625302573/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Weekly_Offer_qunqie.jpg" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1625302573/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/1_el3eld.jpg" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1625302573/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/2_tyrhs6.jpg" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1625302573/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Group_5_pdzhkv.jpg" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1647940806/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2Split_OppoA96_16March2022_kieqqs.png" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1647940806/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/2Split_OppoA76_16March2022_pmytkt.png" />
+      </div>
+    </div>
+    <img id="center"
+      src="https://media.croma.com/image/upload/v1646476478/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP-Strip_SamsungZFold3_5Mar22_m9xfpa.jpg" />
+    <h1 id="aftercarousel">Shop By Price</h1>
+    <div id="container2">
+      <div><img
+          src="https://media.croma.com/image/upload/v1638895486/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_ShopByPrice_7Dec-1_sxhj4w.png" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1638895487/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_ShopByPrice_7Dec-2_o8kayl.png" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1638895488/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_ShopByPrice_7Dec-3_t1qerd.png" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1638895487/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_ShopByPrice_7Dec-4_nrdelk.png" />
+      </div>
+    </div>
+    <div id="container4"></div>
+    <h1 id="aftercarousel">Shop by Features</h1>
+    <div id="container2">
+      <div><img
+          src="https://media.croma.com/image/upload/v1625303703/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/223_h2rymp.jpg" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1625303703/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/22121_rsrtec.jpg" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1625303703/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/22111_tja1kk.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://media.croma.com/image/upload/v1625303718/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Layer_2_hhwrf0.jpg" />
+      </div>
+    </div>
+    <h1 id="aftercarousel">Shop By Brands</h1>
+    <div id="container5">
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Apple_21-Feb2022_jnrspj.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Samsung_21-Feb2022_hs3u5z.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438332/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Vivo_21-Feb2022_jj8j6e.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_One-Plus_21-Feb2022_yly8yr.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_OPPO_21-Feb2022_xf7xgs.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Realme_21-Feb2022_wyt6xt.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Nokia_21-Feb2022_z1gsrh.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645438331/Croma%20Assets/CMS/LP%20Page%20Banners/2022/c10/4-split-brand_Logo_Apple_21-Feb2022_jnrspj.png/mxw_1080,f_auto" />
+      </div>
+    </div>
+    <div id="container3">
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1625303296/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Iphone_11_mcsiah.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1625303297/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Iphone_12_series_dossj6.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1625303296/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Airpods_tg7adl.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1626083216/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Accessories_12July_szxcqw.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638895355/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_2Split_OppoAd_7Dec_rttisg.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638895359/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_PCP_2Split_VivoAd_7Dec_pmgqzc.png/mxw_1080,f_auto" />
+      </div>
+    </div>
+    <h1 id="aftercarousel">Popular Smartphones</h1>
+    <div id="container6"></div>
+    <h1 id="aftercarousel">Limited Time Deals</h1>
+    <div id="container7"></div>
+    <div id="container2">
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1630332530/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_MobileCategorypage-Headphones_Earphones_27Aug_rvcmsf.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1630332530/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_MobileCategorypage-Cases_Covers_27Aug_ispl8x.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1630332530/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_MobileCategorypage-Chargers_Adapters_27Aug_mj76cz.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1627627399/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/MobileCategoryLandingPage-Power_Banks_30July_cxdvln.png/mxw_1080,f_auto" />
+      </div>
+    </div>
+    <div id="container8">
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648636433/Croma%20Assets/CMS/CAtegory/CATEGORY/singlesplit_watch_30march_azpyk0.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1625304267/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/Explore_the_range_zigybm.jpg/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1646476478/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_2Split_PCP_BuyingGuide_2_05Mar2022_ipyl7u.png/mxw_1080,f_auto" />
+      </div>
+      <div><img
+          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1646476479/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/LP_2Split_PCP_BuyingGuide_05Mar2022_g2mwsl.png/mxw_1080,f_auto" />
+      </div>
+    </div>
+
+    <!-- <div id="contents"> -->
+      <h5 id="text">Looking for a mobile phone? Need help to know what’s best for you?</h5>
+      <p id="text">
+        With a wide range of gadgets available in the market, it often gets confusing to differentiate one product from
+        its competitor or to choose one that best meets your requirements. This is where Croma steps in. At Croma, we
+        take
+        pride in helping you buy. It is our constant endeavour to understand your needs and to help you find the product
+        best suited for You! Because, a purchase is just the first step to a relationship that will last for years to
+        come.<br />
+        <br />
+
+
+        Talking about relationships, Croma has been in the business of selling Mobile
+        phones for over a decade. Our expertise in the field of electronics stem from
+        the fact that we have strong tie-ups and associations with a variety of OEMs
+        like <span id="green">Apple, OnePlus, Samsung</span>, Nokia, Sony, Huawei,
+        <span id="green">Vivo, Xiaomi, Oppo</span> , LG, and more, who are known for being the best mobile brands, not
+        only in India but across the world. In fact, this strong association allows us to gather unique insights of what
+        the market actually wants and hence we curate a wide range of products that are especially designed keeping our
+        customers in mind. Owing to this, you can easily explore our vast catalogue and buy Mobile phones online, but we
+        recommend it is best to experience them in store through one of our representatives to ensure you get the right
+        one.<br /><br />
+
+      </p>
+
+      <h5 id="text">So, what makes Mobile phones so important?</h5>
+      <p id="text">
+        Phones have revolutionised the way we do things. One can hardly imagine
+        living without them in the present age. The beloved phone that you have now,
+        and the ones that are yet to come, offer a ton of benefits, among which includes connecting you to the world,
+        keeping you updated with all the latest happenings. Smartphones are, as the name suggest, smart devices that are
+        here to make your life simpler and easier. Smartphones show you time, date, calculate numbers, wake you up when
+        you want them to, remind you of something important, and find location through the GPS navigation. They come
+        with
+        cameras so that you can click pictures and make videos that you can cherish later. To keep your boredom away,
+        your
+        phones can play audio and video, and be your e-book reader or your gaming device. The recorder in a phone
+        provides
+        another advantage of recording your own voice and also that of others.
+        <br /><br />
+
+      </p>
+      <h5 id="text">All that is fine, but what about technology?</h5>
+      <p id="text">
+        From pressing on keys, we have moved to pressing the screen directly; we have seen the shift from MBs to GBs,
+        from
+        zero camera to five cameras, from a few megapixels to more than hundred megapixels, from simple calls and games
+        to
+        video calls and high-end gaming phones, from flip to foldable, the growth story of mobile phones has been
+        phenomenal, and, of course, one can never know what marvels the future holds. Mobile technology has advanced
+        drastically and it keeps on evolving. The future will bring enormous development in the telephony segment, and
+        connection will become seamless like never before. Let’s understand a bit of the technology behind Mobile
+        phones.
+        <br /><br />
+      </p>
+      <p id="text">
+        Mobile phones are classified as Smartphones and Feature phones.<span id="green">smartphones</span>
+        have an operating system such as iOS, Android, and they usually have a touchscreen interface. They can connect
+        you
+        to the internet and provide the option to download apps. They are equipped with camera through which photos can
+        be
+        clicked and videos can be recorded, and they also offer storage space so that information can be saved.
+        Smartphones have connectivity options like Bluetooth and Wi-Fi, and they also give an added advantage in the
+        form
+        of personal assistance like Google Assistant, Siri, Alexa, for our convenience. Smartphones can be secured with
+        security features like pin, pattern, fingerprint and face lock. The latest smartphones come with foldable
+        screens!
+        A feature phone on the other hand is a simple phone that comes with button keys which people use mostly to make
+        calls and, to some extent, to send messages.
+
+      </p>
+      <p id="text">
+        For the purpose of connection, phones use CDMA, GSM, LTE technologies. CDMA stands for Code Division Multiple
+        Access; phones with this network come with built-in chip, which means there is no way of switching to any
+        network
+        other than the one which comes with the phone. GSM stands for Global System for Mobile communication; this is
+        the
+        network which is most popular throughout the world. The phones that supports GSM come with separate slot for
+        inserting SIM card, and you can choose whichever network service provider you like. LTE (Long Term Evolution) is
+        the 4G standard accepted globally, and most new phones utilize 4G for the transmission of data. The term VoLTE,
+        that one often hears a phone supports, refers to Voice over Long Term Evolution which is a way of making calls
+        by
+        using data packet (data which is transmitted through the internet) instead of depending on traditional voice
+        calls. VoLTE has made roaming call charges a thing of the past.
+        <br /><br />
+      </p>
+      <p id="text">
+
+
+        Mobile communication standards are named as 1G, 2G, 3G and 4G. The G stands for generation, which is a way of
+        identifying as well as marketing the service packages that are on offer. The era of 1G and 2G are gone. We are
+        presently in the world of 3G and 4G. While 3G has data bandwidth of 2 Mbps – 21 Mbps, 4G has bandwidth of 2 Mbps
+        –
+        1 Gbps. Each new generation gets better and brings in a faster and smoother way of communication. And as with
+        any
+        electronic devices, the new makes the old obsolete after a certain time. New phones have faster speed, better
+        coverage and reliability. 5G is one such advancement in the mobile phone sphere. It is yet in its nascent stage,
+        but it promises to change the way we communicate. If 4G network seems to do wonders for us, 5G would do ten
+        times
+        more wonders. Smartphones with 5G network would allow high speed and seamless internet connectivity which would
+        particularly help in every real time applications, such as operating self-driving cars which requires a
+        continuous
+        stream of fast internet for receiving signals. Even though 4G provides us a good connection over the internet
+        but
+        it still stops working when you are at a certain place (such as when you are in a running train), with 5G such
+        disturbances are supposed to be completely curtailed. Voice and video calls would be much better than it is at
+        present.
+      </p>
+      <p id="text">
+
+
+        While there are a few operating systems, but let us save some time and only emphasize on
+        two which are the most popular, namely Android and iOS. The operating system which is
+        designed only for iPhone and other Apple devices such as iPad, iPod is called iOS. Android
+        is an open-source platform (which allows third parties to use the interface) designed by
+        the search engine giant Google. <span id="green">iPhones</span> have better security
+        features as compared to <span id="green">Android phones</span>, BlackBerry phones, which are not many in the
+        market (but available at Croma), used to have its own operating system but it now relies on Android.
+        <br /><br />
+      </p>
+      <p id="text">
+
+
+        Other factors to consider while looking up for a phone are: Memory (the RAM and the internal memory; more the
+        capacity, more the storage capacity; also, most phones come with expandable memory feature); chipset (such as
+        Snapdragon by Qualcomm, Exynos by Samsung, Kirin by Huawei; the latest version of these chipsets provides a
+        faster
+        and smoother user experience); the camera (for instant click of those special moments); battery life which
+        determines how many hours the battery of a phone will last; battery charging technology (such as Dash Charge and
+        Warp Charge by OnePlus, Adaptive Fast Charging by Samsung; Oppo has shown the capability of charging its phone
+        Reno Ace with VOOC technology from zero to 100 percent under 30 minutes). Mobile Phones are now aware of their
+        environment; they have various kinds of sensors (like fingerprint, proximity, compass, etc.) which understands
+        our
+        commands, movements, gestures, and environmental conditions, and accordingly helps us achieve the desired
+        outcome.
+        The photographer in you would surely want a great camera in a phone that captures all the details and comes with
+        good zooming ability, not just the rear camera but the selfie lover should also have a reason to feel good, thus
+        a
+        phone with great rear and front camera will do the trick. The display of new mobile phones are of extremely high
+        quality, this makes watching videos and movies a joy. Smartphones nowadays support 2K and 4K displays, which are
+        giving HD TVs a run for their money.
+      </p>
+      <p id="text">
+
+
+        <span id="green">Mobile accessories</span> such as cases and covers, mobile chargers, USB cables and connectors,
+        mobile anti-virus, and selfie sticks not only protect your mobile phones but also come handy in case of an
+        emergency.
+        <br /><br />
+      </p>
+
+
+
+      <h5 id="text">So, which is the best mobile phone for you?</h5>
+      <p id="text">
+        Well, this is completely subjective to a person’s taste, usage and preference.
+        What may be best suited for one, may not actually be a wise choice for the other.
+        Some may value price while some others may focus on features. Mobile phone manufacturers
+        keep adding new and innovative features in mobile phones every year to enable a
+        phone user to easily use apps to get their work done instead of a computer. The latest Smartphones come with a
+        quad or octa core processor to give the user a seamless multitasking experience. The latest mobile phones offer
+        powerful processors and amazing gaming experiences. These Smartphones have powerful GPUs for high-end gaming
+        performance. Also, the latest smartphones have extremely good camera quality. Among the premium phones, Apple
+        and
+        Samsung have been running at the forefront for a while, but their phones are pretty expensive. OnePlus has
+        gained
+        smartphone users’ trust within a short span of time by offering beautifully designed phones with cutting-edge
+        technology, and is surely giving a tough competition to both Apple and Samsung. Xiaomi, with its latest phones,
+        is
+        proving to be a flagship killer.
+        <br /><br />
+      </p>
+      <p id="text">
+
+
+
+        Need more help in choosing the right mobile phone? Have a look at our
+        <span id="green">mobile phone buying guide</span> .
+      </p>
+      <p id="text">
+
+
+        Thinking if you should buy Mobile phones online or from a Store?
+        Honestly, as long as you know exactly what you want, you can either buy mobile phones online or visit a store to
+        do so. At Croma, we try to ensure a seamless shopping experience - in-store, online or mobile. Among a flurry of
+        benefits, we provide personalised exclusive offers, convenient EMI payment options, etc. Just in case you face
+        any
+        problem with your gadget. Also, while the mobile phone prices in India may vary from brand to brand and
+        technology
+        to feature, we strive hard to provide a wide catalogue of phones for every budget. After all, the core purpose
+        of
+        Croma is to convert each and every dream of our customers into reality.
+        <br /><br />
+      </p>
+      <p id="text">
+
+
+        Croma offers an extensive array of protection, repair and maintenance plans for appliances and devices. To keep
+        your electronics running for a longer time, it is a wise decision to explore and buy ZIP Services from Croma.
+        For
+        your mobile phone, you can consider getting Extended Warranty, Spills & Drop, Screen Protection, Device Secure
+        and
+        Device Secure Gold, and On Demand Repair services</p>
+      <a href="index.html"><button id="btn2">CONTINUE SHOPPING</button></a>
+    </div>
+
+
+    <footer>
+      <div id="footermain">
+        <div>
+          <div>
+            <p class="fh">CONNECT WITH US</p>
+          </div>
+          <div id="inp">
+            <input type="email" placeholder="Enter Email ID" id="footinp">
+            <button id="footbtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+
+          <div id="logoCollector">
+            <a href="https://www.youtube.com/user/CromaRetail"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/CromaRetail/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/croma.retail/"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/cromaretail?s=11"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <p id="copyright">© Copyright 2021 Croma. All rights reserved</p>
+
+        </div>
+        <div class="footerline">
+          <div></div>
+        </div>
+        <div>
+          <div>
+            <p class="fh">USEFUL LINKS</p>
+          </div>
+          <div class="list">
+            <div><a href="https://www.croma.com/about-croma">About Croma</a></div>
+            <div><a href="https://www.croma.com/lp-croma-e-care">E-Care</a></div>
+            <div><a href="https://www.croma.com/helpAndSupport">Help And Support</a></div>
+            <div><a href="https://www.croma.com/franchise-opportunity">Franchise Opportunity</a></div>
+            <div><a href="https://www.croma.com/faq">FAQs</a></div>
+            <div><a href="https://www.croma.com/site-map">Site MAP</a></div>
+            <div><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></div>
+            <div><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></div>
+            <div><a
+                href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">Bulk
+                Enquiry</a></div>
+            <div><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></div>
+            <div><a href="https://www.croma.com/store?location=default">Store Locator</a></div>
+            <div><a href="https://www.croma.com/disclaimer">Disclaimer</a></div>
+            <div><a href="https://www.croma.com/delightful-programmes">Delightful Programmes</a></div>
+            <div><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></div>
+          </div>
+
+        </div>
+        <div class="footerline">
+          <div></div>
+        </div>
+        <div>
+          <div>
+            <p class="fh">PRODUCTS</p>
+          </div>
+          <div class="list">
+            <div><a href="https://www.croma.com/televisions-accessories/c/997">Telivisions & Accessories</a></div>
+            <div><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></div>
+            <div><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></div>
+            <div><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></div>
+            <div><a href="https://www.croma.com/phones-wearables/c/1">Phones and Wearables</a></div>
+            <div><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></div>
+            <div><a href="https://www.croma.com/computers-tablets/c/3">Computers and Tablets</a></div>
+            <div><a href="https://www.croma.com/gaming/c/7">Gaming</a></div>
+            <div><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></div>
+            <div><a href="https://www.croma.com/accessories/c/8">Accessories</a></div>
+            <div><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></div>
+            <div><a href="https://www.croma.com/top-brands/c/topbrands">Top Brands</a></div>
+            <div><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></div>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script src="mobile.js"></script>
+<script src="footer.js"></script>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
