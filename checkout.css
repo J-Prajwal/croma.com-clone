@@ -1,0 +1,15 @@
+#container {
+    border: 1px solid grey;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#container .innerBox {
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 90%;
+    height: 80px;
+}

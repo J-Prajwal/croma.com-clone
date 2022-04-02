@@ -1,0 +1,313 @@
+.headings {
+    /* padding-left: 10px; */
+    /* border: 1px solid red; */
+    width: 85%;
+    height: 50px;
+    margin-top: 20px;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    padding-top: 5px;
+}
+
+#container {
+    display: flex;
+    width: 85%;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding-top: 10px;
+    /* gap: 10px; */
+}
+
+#container div {
+    /* margin-top: 5px; */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 250px;
+}
+
+#container div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#container2 {
+    
+    display: flex;
+    padding-top: 10px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: auto; */
+    width: 85%;
+    /* border: 1px solid red; */
+    margin: auto;
+    /* gap: 10px; */
+}
+
+#container2 div {
+    /* margin-top: 15px; */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    width: 100.5%;
+    height: 350px;
+}
+
+#container2 div:hover {
+    cursor: pointer;
+}
+
+#container2 div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#products {
+    width: 85%;
+    display: flex;
+    margin: auto;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+#products div {
+    /* border: 1px solid red; */
+    cursor: pointer;
+    background-color: #1e1e1e;
+    height: 370px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#products div img {
+    width: 100%;
+    height: 235px;
+    margin-top: 5px;
+}
+
+div p {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#products div .price {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 40px;
+    margin-top: -15px;
+}
+
+#products div .price strike {
+    padding-left: 35px;
+    opacity: 75%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#checked {
+    color: teal;
+}
+
+div .fa {
+    color: #aaa;
+}
+
+#products .rating {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    padding-left: 20px;
+}
+
+#container2 .slider {
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* height: 250px; */
+}
+
+#products .slider1 {
+    margin: auto;
+    width: 100%;
+}
+
+#fixedContainer {
+    cursor: pointer;
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+#fixedContainer div {
+    margin: auto;
+    /* margin-top: 5px; */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 310px;
+}
+
+#fixedContainer div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#brandContainer {
+    cursor: pointer;
+    display: flex;
+    width: 85%;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding-top: 10px;
+    /* gap: 10px; */
+}
+
+#brandContainer div {
+    margin: auto;
+    /* margin-top: 5px; */
+    border-radius: 10px;
+    /* border: 1px solid grey; */
+    width: 100%;
+    height: auto;
+}
+
+#brandContainer div img{
+    padding: 15px;
+    border: 1px solid grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#brandContainer .slider3 {
+    width: 100%;
+    margin: auto;
+}
+
+#fixedContainer2 {
+    cursor: pointer;
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+#fixedContainer2 div {
+    margin: auto;
+    /* margin-top: 5px; */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 310px;
+}
+
+#fixedContainer2 div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#container3 {
+    display: flex;
+    padding-top: 10px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: auto; */
+    width: 85%;
+    /* border: 1px solid red; */
+    margin: auto;
+    /* gap: 10px; */
+}
+
+#container3 div {
+    /* margin-top: 15px; */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    width: 100.5%;
+    height: 320px;
+}
+
+#container3 div:hover {
+    cursor: pointer;
+}
+
+#container3 div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#container3 .slider {
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* height: 250px; */
+}
+
+.safeContainer {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tataAdvantagesContainer {
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 350px;
+    background-image: url("https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1645445289/Croma%20Assets/CMS/Homepage%20Banners/Other/bg_eacw6e.png/mxw_1440,f_auto");
+}
+
+/* .tataAdvantagesContainer div:nth-child(1) {
+    border: 1px solid red;
+    height: auto;
+} */
+
+#advBox {
+    /* border: 1px solid red; */
+    height: 285px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    margin-top: 13px;
+    margin-left: 100px;
+}
+
+#advBox img {
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.contents p {
+    word-spacing: 2px;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#link {
+    color: teal;
+    text-decoration: underline;
+}
