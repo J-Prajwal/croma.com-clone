@@ -1,0 +1,242 @@
+// Navbar file style sheet starts here
+
+#navbar1 {
+      height: 80px;
+      width: 100%;
+      /* border: 1px solid red; */
+      display: flex;
+      background-color: black;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    #navbar1>div {
+      height: 60%;
+      width: 40%;
+      /* border: 1px solid white; */
+      color: white;
+    }
+
+    #box1 {
+
+      display: flex;
+      gap: 20px;
+      margin-left: 50px;
+    }
+
+    #box1>div {
+      height: 100%;
+      width: 800px;
+      /* border: 1px solid white; */
+      color: white;
+      display: flex;
+    }
+
+    #menu1 {
+      z-index: 1000;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      height: 100%;
+      border: none;
+      font-size: 20px;
+      padding-top: 13px;
+    }
+
+    #video1 {
+      height: 100%;
+      width: 150px;
+
+    }
+
+    #search {
+      height: 100%;
+      width: 600px;
+      border-radius: 10px;
+      padding-left: 20px;
+      border: none;
+      text-decoration: none;
+
+    }
+
+    #box2 {
+      margin-left: 300px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    #box2>div {
+      /* border: 1px solid white; */
+      height: 100%;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    #map {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #map1 {
+      margin-right: 10px;
+    }
+
+    #pen {
+      margin-left: 10px;
+    }
+
+    #user {
+      margin-left: 50px;
+    }
+
+    #user>a {
+      text-decoration: none;
+      padding-right: 40px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    #cart:nth-child(2) {
+      text-decoration: none;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+
+    }
+
+    .dropbtn {
+      background-color: black;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+
+      min-width: 160px;
+      box-shadow: #e6f6f0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #e6f6f0;
+      color: #4dcaba;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+      display: block;
+    }
+// Navbar file style sheet ends here
+
+
+
+// Navbar HTML Part starts here
+<!-- Main Navbar Starts Here -->
+  <div id="navbar1">
+    <div id="box1">
+      <!-- <div><a href="/"><video id="video1"src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4" ></video></a></div> -->
+      <div>
+        <a class="logo custom-s logo croma-desktop-logo" data-testid="Logo" href="/index.html">
+          <video id="video1" controls autoplay loop muted>
+            <source
+              src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4"
+              type="video/mp4">
+            <source src="movie.mp4" type="video/mp4">
+
+          </video></a>
+
+      </div>
+      <div id="menu">
+
+        <a id="menu1" href=""><span><i class="fa-solid fa-bars"></i></a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content"
+            style="position: absolute; z-index: 999; overflow: scroll; height: 600px; width: 250px;">
+            <a href="mobile.html">Mobiles</a>
+            <a href="television.html">Televisions & Accessories</a>
+            <a href="">Laptops</a>
+            <a href="">Phones and Wearables</a>
+            <a href="">Kitchen Appliances</a>
+            <a href="">Audio & Fitness</a>
+            <a href="">Gromming & Personal Care</a>
+            <a href="">Cameras & Accessories</a>
+            <a href="">Smart Devices</a>
+            <a href="">Gaming</a>
+            <a href="">Acees sories</a>
+            <a href="">Top Brands</a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div><input id="search" type="search" placeholder="What are you looking for? "></div>
+    </div>
+    <div id="box2">
+      <div id="map">
+        <div id="map1"><i class="fa-solid fa-location-dot"></i></div>
+        <div> Mumbai,400049</div>
+        <div id="pen"><i class="fa-solid fa-pencil"></i></div>
+      </div>
+      <div id="user">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a id="cart" href="cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Main Navbar Ends Here -->
+// Navbar HTML Part ends here
+
+
+//Navbar js script starts here
+function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+//Navbar js script ends here
