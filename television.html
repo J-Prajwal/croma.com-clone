@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon"
+        href="data:image/png;base64,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"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Television</title>
+</head>
+<link rel="stylesheet" href="television.css">
+<link rel="stylesheet" href="footer.css">
+<script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+<style>
+    #navbar1 {
+        height: 80px;
+        width: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        background-color: black;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #navbar1>div {
+        height: 60%;
+        width: 40%;
+        /* border: 1px solid white; */
+        color: white;
+    }
+
+    #box1 {
+
+        display: flex;
+        gap: 20px;
+        margin-left: 50px;
+    }
+
+    #box1>div {
+        height: 100%;
+        width: 800px;
+        /* border: 1px solid white; */
+        color: white;
+        display: flex;
+    }
+
+    #menu1 {
+        z-index: 1000;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        height: 100%;
+        border: none;
+        font-size: 20px;
+        padding-top: 13px;
+    }
+
+    #video1 {
+        height: 100%;
+        width: 150px;
+
+    }
+
+    #search {
+        height: 100%;
+        width: 600px;
+        border-radius: 10px;
+        padding-left: 20px;
+        border: none;
+        text-decoration: none;
+
+    }
+
+    #box2 {
+        margin-left: 300px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #box2>div {
+        /* border: 1px solid white; */
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #map {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #map1 {
+        margin-right: 10px;
+    }
+
+    #pen {
+        margin-left: 10px;
+    }
+
+    #user {
+        margin-left: 50px;
+    }
+
+    #user>a {
+        text-decoration: none;
+        padding-right: 40px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+    }
+
+    #cart:nth-child(2) {
+        text-decoration: none;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+
+    }
+
+    .dropbtn {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+
+        min-width: 160px;
+        box-shadow: #e6f6f0;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #e6f6f0;
+        color: #4dcaba;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .fh {
+        font-weight: bolder;
+        margin-bottom: 40px;
+        margin-left: 0px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <div id="navbar1">
+        <div id="box1">
+            <!-- <div><a href="/"><video id="video1"src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4" ></video></a></div> -->
+            <div>
+                <a class="logo custom-s logo croma-desktop-logo" data-testid="Logo" href="/index.html">
+                    <video id="video1" controls autoplay loop muted>
+                        <source
+                            src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4"
+                            type="video/mp4">
+                        <source src="movie.mp4" type="video/mp4">
+
+                    </video></a>
+
+            </div>
+            <div id="menu">
+
+                <a id="menu1" href=""><span><i class="fa-solid fa-bars"></i></a>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content"
+                        style="position: absolute; z-index: 999; overflow: scroll; height: 600px; width: 250px;">
+                        <a href="mobile.html">Mobiles</a>
+                        <a href="television.html">Televisions & Accessories</a>
+                        <a href="">Laptops</a>
+                        <a href="">Phones and Wearables</a>
+                        <a href="">Kitchen Appliances</a>
+                        <a href="">Audio & Fitness</a>
+                        <a href="">Gromming & Personal Care</a>
+                        <a href="">Cameras & Accessories</a>
+                        <a href="">Smart Devices</a>
+                        <a href="">Gaming</a>
+                        <a href="">Acees sories</a>
+                        <a href="">Top Brands</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div><input id="search" type="search" placeholder="What are you looking for? "></div>
+        </div>
+        <div id="box2">
+            <div id="map">
+                <div id="map1"><i class="fa-solid fa-location-dot"></i></div>
+                <div> Mumbai,400049</div>
+                <div id="pen"><i class="fa-solid fa-pencil"></i></div>
+            </div>
+            <div id="user">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <a id="cart" href="cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <p id="nav"> <a href="index.html">Chroma</a> <span id="span"><i class="fa-solid fa-angle-right"></i></span>
+        Television and Accessories <span id="span"><i class="fa-solid fa-angle-right"></i></span><span
+            id="boldmobilephone"> LED TVs</span></p>
+    <h1 id="heading">LED TVs</h1>
+
+
+
+
+    <div id="carouselExampleCaptions " class="carousel slide carousel1" data-bs-ride="carousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648117752/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/CP_television_21march_njlixx.png/mxw_2048,f_auto"
+                        class="d-block w-100" class="d-block w-100" alt="...">
+                </div>
+
+
+
+                <div class="carousel-item">
+                    <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648725455/Croma%20Assets/CMS/CAtegory/Televisions/LProtating_gudipadwa_31march_zhhxwr.png/mxw_2048,f_auto"
+                        class="d-block w-100" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+
+
+
+        <img id="center2"
+            src="https://media.croma.com/image/upload/v1648318750/Croma%20Assets/CMS/CAtegory/Televisions/SingleSplit_ICICI_HDFC_12March2022_tgxbyu.jpg" />
+
+
+        <div id="container1">
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648469550/Croma%20Assets/CMS/CAtegory/Televisions/2Split_TVPCP_croma-32_21March22_btsh4i.png/mxw_2048,f_auto"
+                    alt=""></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648202193/Croma%20Assets/CMS/CAtegory/Televisions/2Split_TVPCP_iFFALCON-32_17March22_xup7fq.png/mxw_2048,f_auto"
+                    alt=""></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023647/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_androidtv_21Mar_kwae8w.png/mxw_2048,f_auto"
+                    alt=""></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023648/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_4ktv_21Mar_mxk0hi.png/mxw_2048,f_auto"
+                    alt=""></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648464506/Croma%20Assets/CMS/CAtegory/Televisions/4split_tvcp_budgettv_21Mar_o7c5rf.png/mxw_2048,f_auto"
+                    alt=""></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023647/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_oledtv_21Mar_lazmkg.png/mxw_2048,f_auto"
+                    alt=""></div>
+        </div>
+
+
+        <h1 id="heading">Shop By Screen Size</h1>
+
+
+        <div id="container2">
+            <div><img
+                    src="https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_32inchtv_21Mar_m5im5x.png"
+                    alt=""></div>
+            <div><img
+                    src="https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_43inchtv_21Mar_hijupu.png"
+                    alt=""></div>
+            <div><img
+                    src="https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_55inchtv_21Mar_szbepz.png"
+                    alt=""></div>
+            <div><img
+                    src="https://media.croma.com/image/upload/v1648023647/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_largeinchtv_21Mar_bplxei.png"
+                    alt=""></div>
+
+        </div>
+        <h1 id="heading"> Deals on 32 inch LED</h1>
+        <div id=container10></div>
+
+
+        <div id="container3">
+            <div><img
+                    src="https://media.croma.com/image/upload/v1648469542/Croma%20Assets/CMS/CAtegory/Televisions/LP_Hisense_23March2022_02_oevl0u.png"
+                    alt=""></div>
+        </div>
+
+        <h2 id="heading">Deals on 55" 4K Smart TVs</h2>
+        <div id="container11"></div>
+
+        <div id="container4">
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023647/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_inder10000tv_21Mar_vpzhg3.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_10-20tv_21Mar_ujoszj.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_20-30tv_21Mar_xwkxc9.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1648023646/Croma%20Assets/CMS/LP%20Page%20Banners/2022/IPL%20-%202022/4split_tvcp_30abovetv_21Mar_vzvnqe.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+        </div>
+
+        <div id="container5">
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638785554/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/lp_brandbanner_mi_6Dec_1_gutoan.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633081798/Croma%20Assets/CMS/CAtegory/Televisions/4split_TVProductcategory_sony_30sept_xsfubt.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633081798/Croma%20Assets/CMS/CAtegory/Televisions/4split_TVProductcategory_samsung_30sept_tdtjzk.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638785554/Croma%20Assets/CMS/LP%20Page%20Banners/2021/PCP%20Mobile/lp_brandbanner_oneplus_6Dec_1_vgnm4q.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+        </div>
+
+        <div id="container6">
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1646482657/Croma%20Assets/CMS/CAtegory/Televisions/4-Split-Tv-PCP_Sound-Bars_05Mar2022_vrvmlf.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633082618/Croma%20Assets/CMS/CAtegory/Televisions/4split_TVProductcategory_multimedia_speaker_30sept_gx3hlz.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633082648/Croma%20Assets/CMS/CAtegory/Televisions/4split_TVProductcategory_streaming_device_30sept_wdtjht.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633083165/Croma%20Assets/CMS/CAtegory/Televisions/4split_TVProductcategory_cable_30sept_rxuhid.png/mxw_2048,f_auto"
+                    alt="" height="150px" width="290px"></div>
+        </div>
+
+        <div id="container8">
+            <div><img
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633703738/Croma%20Assets/CMS/CAtegory/Televisions/1split_TVProductcategory_06_08oct_jsj0iz.png/mxw_2048,f_auto"
+                    alt=""> </div>
+        </div>
+
+        <!-- bottom description -->
+
+        <div id="container7">
+            <h5>Looking for a new LED TV? Need help in finding the best LED TVs?</h5>
+            <p>With a wide range of electronics available in the market, it often gets confusing to differentiate one
+                product from its competitor or to choose one that best fits your requirements. This is where Croma steps
+                in. At Croma, we take pride in helping you buy. Croma is committed to understanding your needs and help
+                you find the product best suited for You! We believe a purchase is just the first step to a relationship
+                that will last for years to come.
+                Croma has been the destination of choice for consumers looking for a television for over a decade now,
+                from the classic CRT all the way to the modern LED. Our associations and tie-ups with the leading
+                television brands across the world such as Sony, LG and Samsung coupled with our experience in retail
+                allows us to present our customers with an unmatched range of all the best LED TVs on the market.
+                Keeping our customers and their needs as our primary focus, we utilised our expertise in the field by
+                presenting Croma LED TVs which offer high end performance at accessible price points. Customers can
+                choose to buy an LED TV online, or experience and purchase the best LED TVs in store, where our
+                representatives are always happy to help.</p>
+            <br>
+            <h5> What to consider when picking an LED TV?</h5>
+            <p> Croma is aware of the vastly different needs of different consumers, while some people are looking for
+                premium features and top of the line technology, others may yearn for a value for money in their
+                selection. Terms like OLED, QLED, 4K can be daunting for consumers, so let’s break down what to know
+                when trying to upgrade your LED.
+                <br>
+                The first consideration is the type of panel you want to get, this can be a function of your budget, or
+                of the picture quality and performance you desire from the television. The general options are LED, QLED
+                and OLED with a basic trade-off between price and performance as you move up the ladder towards OLED.
+                Coming to the screen size, the general rule here is bigger equals better, but be sure to keep your room
+                requirements in mind when deciding upon your screen size. Resolution is an essential factor to consider,
+                as HD Ready, Full HD are widely available while 4K (Ultra-HD) is becoming more popular than ever. Be
+                sure to get either HDR or Dolby Vision with a 4K LED TV to really enjoy that superior picture quality.
+                <br>
+                Choosing between a smart TV and regular TV is also key, with higher convenience and ease of operation
+                associated with smart LED TVs. People often forget the importance of sound when picking a television, so
+                make sure you check out the LED TV speaker configuration and whether you have a woofer for your LED TV.
+                It is key to conduct a check on the connectivity options, ports and slots available on your TV. This
+                ensures that you can easily connect all your external devices such as set top boxes or gaming consoles
+                to the TV without the need for extra hardware.
+            </p>
+            <br>
+            <h5>What is the Technology in an LED TV?</h5>
+            <p> LED stands for light emitting diode, referring to the illumination system utilised in these TVs. QLED
+                and OLED are further evolutions of LED technology, providing an improvement in picture quality and
+                contrast. LED TVs are much more energy efficient than the LCD technology they replaced, with even 55
+                inch LED TVs and 65 inch LED TVs using less power than a 32 inch LCD. LED TVs are flat panel TVs which
+                use light emitting diodes as a light source behind the screen, which enables them to be thinner than
+                traditional LCD TVs. With today's technology, you can find 75 inch LED TVs with thickness comparable to
+                modern smartphones. The latest LED TVs are equipped with integrated internet, providing various Wi-Fi
+                LED TVs, LED TVs with Bluetooth and even LED TVs with integrated cameras. Smart LED TVs aim to further
+                integrate operating systems and computer-like hardware into TVs, with Android LED TVs gaining more
+                traction than ever.</p>
+            <br>
+            <h5> What is this OLED-QLED Buzz all About?</h5>
+            <p> QLED stands for Quantum Dot LED, which is an improvement of the existing LED technology, utilising
+                quantum dot technology and an LED backlight. OLED technology, which stands for Organic Light Emitting
+                Diode is fundamentally different from current LED technology, in that it is emissive, and the pixels
+                produce their own light. QLED TVs are brighter than OLED, while OLED screens have better contrast and
+                black levels. OLEDs are generally considered to have better picture quality and viewing angles, while
+                QLED TVs are more versatile in terms of size and pricing. These technologies are the top end
+                technologies in the television world today, and the quality and clarity of image on either is absolutely
+                stunning. With brands committed to consistent innovation, OLED and QLED TVs will only get better as time
+                goes on.
+                <br>
+                To know more about how to choose the right TV, have a look at our TV buying guide .</h5>
+                <br>
+            <h5>Should You Buy a LED TV Online or from a Store?</h5>
+            <p> As long as you know exactly what you want, you can do either. At Croma, we try to ensure a seamless
+                buying experience - in-store, online or mobile. Among a flurry of benefits, we provide personalised
+                exclusive offers, convenient EMI payment options, as well as a Life Time Service Assurance, just in case
+                you face any problem with your gadget. Also, while the LED television prices in India may vary from
+                brand to brand and technology to feature, we strive hard to provide a wide catalogue of the best LED TVs
+                and TV accessories for every budget. After all, the core purpose of Croma is to convert each and every
+                dream of our customers into reality.
+                <br>
+                Croma offers an extensive array of protection, repair and maintenance plans for appliances and devices.
+                To keep your electronics running for a longer time, it is a wise decision to explore and buy ZIP
+                Services from Croma. For your LED TV, you can consider getting Extended Warranty, Screen Protection,
+                Home Maintenance, Device Secure Gold, Device Secure, and On Demand Repair services.
+            </p>
+            </h5>
+        </div>
+        <a href="index.html"><button id="btn2">CONTINUE SHOPPING</button></a>
+
+
+        <!-- the is part of footer -->
+
+        <footer>
+            <div id="footermain">
+                <div>
+                    <div>
+                        <p class="fh">CONNECT WITH US</p>
+                    </div>
+                    <div id="inp">
+                        <input type="email" placeholder="Enter Email ID" id="footinp">
+                        <button id="footbtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+
+                    <div id="logoCollector">
+                        <a href="https://www.youtube.com/user/CromaRetail"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/CromaRetail/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/croma.retail/"><i
+                                class="fa-brands fa-instagram-square"></i></a>
+                        <a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/cromaretail?s=11"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <p id="copyright">© Copyright 2021 Croma. All rights reserved</p>
+
+                </div>
+                <div class="footerline">
+                    <div></div>
+                </div>
+                <div>
+                    <div>
+                        <p class="fh">USEFUL LINKS</p>
+                    </div>
+                    <div class="list">
+                        <div><a href="https://www.croma.com/about-croma">About Croma</a></div>
+                        <div><a href="https://www.croma.com/lp-croma-e-care">E-Care</a></div>
+                        <div><a href="https://www.croma.com/helpAndSupport">Help And Support</a></div>
+                        <div><a href="https://www.croma.com/franchise-opportunity">Franchise Opportunity</a></div>
+                        <div><a href="https://www.croma.com/faq">FAQs</a></div>
+                        <div><a href="https://www.croma.com/site-map">Site MAP</a></div>
+                        <div><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></div>
+                        <div><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></div>
+                        <div><a
+                                href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">Bulk
+                                Enquiry</a></div>
+                        <div><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></div>
+                        <div><a href="https://www.croma.com/store?location=default">Store Locator</a></div>
+                        <div><a href="https://www.croma.com/disclaimer">Disclaimer</a></div>
+                        <div><a href="https://www.croma.com/delightful-programmes">Delightful Programmes</a></div>
+                        <div><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></div>
+                    </div>
+
+                </div>
+                <div class="footerline">
+                    <div></div>
+                </div>
+                <div>
+                    <div>
+                        <p class="fh">PRODUCTS</p>
+                    </div>
+                    <div class="list">
+                        <div><a href="https://www.croma.com/televisions-accessories/c/997">Telivisions & Accessories</a>
+                        </div>
+                        <div><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></div>
+                        <div><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></div>
+                        <div><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></div>
+                        <div><a href="https://www.croma.com/phones-wearables/c/1">Phones and Wearables</a></div>
+                        <div><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></div>
+                        <div><a href="https://www.croma.com/computers-tablets/c/3">Computers and Tablets</a></div>
+                        <div><a href="https://www.croma.com/gaming/c/7">Gaming</a></div>
+                        <div><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></div>
+                        <div><a href="https://www.croma.com/accessories/c/8">Accessories</a></div>
+                        <div><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></div>
+                        <div><a href="https://www.croma.com/top-brands/c/topbrands">Top Brands</a></div>
+                        <div><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script src="television.js"></script>
+
+<script src="footer.js"></script>
+
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
