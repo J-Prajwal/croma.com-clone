@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <title>CartPage</title>
+
+    <style>
+
+/* // Navbar file style sheet starts here */
+
+#navbar1 {
+      height: 80px;
+      width: 100%;
+      /* border: 1px solid red; */
+      display: flex;
+      background-color: black;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    #navbar1>div {
+      height: 60%;
+      width: 40%;
+      /* border: 1px solid white; */
+      color: white;
+    }
+
+    #box1 {
+
+      display: flex;
+      gap: 20px;
+      margin-left: 50px;
+    }
+
+    #box1>div {
+      height: 100%;
+      width: 800px;
+      /* border: 1px solid white; */
+      color: white;
+      display: flex;
+    }
+
+    #menu1 {
+      z-index: 1000;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      height: 100%;
+      border: none;
+      font-size: 20px;
+      padding-top: 13px;
+    }
+
+    #video1 {
+      height: 100%;
+      width: 150px;
+
+    }
+
+    #search {
+      height: 100%;
+      width: 600px;
+      border-radius: 10px;
+      padding-left: 20px;
+      border: none;
+      text-decoration: none;
+
+    }
+
+    #box2 {
+      margin-left: 300px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    #box2>div {
+      /* border: 1px solid white; */
+      height: 100%;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    #map {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #map1 {
+      margin-right: 10px;
+    }
+
+    #pen {
+      margin-left: 10px;
+    }
+
+    #user {
+      margin-left: 50px;
+    }
+
+    #user>a {
+      text-decoration: none;
+      padding-right: 40px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    #cart:nth-child(2) {
+      text-decoration: none;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+
+    }
+
+    .dropbtn {
+      background-color: black;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+
+      min-width: 160px;
+      box-shadow: #e6f6f0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #e6f6f0;
+      color: #4dcaba;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+      display: block;
+    }
+/* // Navbar file style sheet ends here */
+
+
+          @import url('http://fonts.cdnfonts.com/css/gotham');
+        body{
+            font-family:'Gotham', sans-serif;
+            background-color: rgba(3, 3, 3, 0.925);
+        color: white;
+        }
+        #top{
+        padding-top: 10px;
+        width: 80%;
+        border: 1px solid red;
+        font-family:'Gotham', sans-serif;
+        padding-left: 10%;
+        padding-right: 10%;
+        /* background-color: rgba(3, 3, 3, 0.925); */
+        color: white ;
+        margin-bottom: 50px;
+
+        
+    }
+
+    .top1{
+        font-size: 12px;
+        margin-bottom: 50px;
+        margin-top: 40px;
+        /* border: 1px solid red; */
+    }
+    .top2{
+        /* border: 1px solid red; */
+        height: 300px;
+        display: flex;
+    }
+    .top2a{
+        /* border: 1px solid blue; */
+        width: 100%;
+        display: flex;
+        /* margin-bottom: 10px; */
+    }
+    .top2a1>button{
+        padding:10px 40px 10px 40px;
+        border-radius: 10px;
+        background-color: #00e9bf;
+    }
+
+    .top2a2{
+        margin-left: 10px ;
+        margin-top: -10px ;
+        color: white;
+        /* border: 1px solid yellow; */
+    }
+    .top2b{
+        border: 1px solid grey;
+        border-radius: 5px;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .img_persent{
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        margin: 10px 7px 7px 7px;
+    }
+
+    #percent_img{
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .top2c{
+        display:flex;
+        width: 100%;
+        /* border: 1px solid green; */
+        height: 400px;
+    }
+    .top2d{
+        display: flex;
+        height: 100px;
+        /* border: 1px solid green; */
+        background-color: #3c3c3c;
+        padding-left: 10px;
+    }
+
+    .b1img{
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    .b1qty{
+        border: 1px solid white;
+        width: 55px;
+        height: 25px;
+        text-align: center;
+        margin: auto;
+        border-radius: 5px;
+        padding-top: 3px;
+        font-size: 14px;
+        padding-bottom: -5px;
+        font-weight: 500;
+    }
+
+    .b1qty>p{
+        margin-top: 5px;
+        font-size: 5px;
+        font-weight: 300;
+    }
+
+    .b1{
+        /* border: 1px solid red; */
+        width: 20%;
+        height: 200px;
+    }
+    .b2{
+        /* border: 1px solid red; */
+        width: 60%;
+        height: 200px;
+        padding-left: 10px;
+    }
+
+    .b3{
+        /* border: 1px solid red; */
+        width: 30%;
+        height: 200px;
+         
+    }
+    .divForB3{
+        /* border: 1px solid red; */
+        width: 90%;
+        height: 200px;
+        padding-left: 5%;
+        padding-right: 5%;  
+    }
+    #offerDiv1{
+        width: 20%;
+        height: 100%;
+        margin-top: -10px;
+    }
+    #offerDiv2{
+        width: 60%;
+        margin-top: -10px;
+    }
+    #offerDiv2 p{
+        font-size: 15px;
+        font-weight: 400;
+        text-align: justify;
+        margin-right: 10px;
+    }
+    #offerDiv3 a{ 
+        color: #00e9bf;
+        font-size:14px;
+        padding-left: 50px;
+        font-weight: bold;
+    }
+    .topfirst{
+        /* border: 1px solid pink; */
+        width: 70%;
+    }
+    .topsecond{
+        /* border: 1px solid purple; */
+        width: 30%;
+        margin-left: 20px;
+    }
+
+    .second1{
+        border: 1px solid grey;
+        height: 250px;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+
+    .second2{
+        height: 70%;
+        border: 1px solid grey;
+        margin-top: 26px;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+    
+    img{
+        width: 100%;
+    }
+    p{
+        font-weight: bold;
+    }
+
+    .cart_optn{
+        display: flex;
+        padding-right: 10px;
+
+    }
+
+    .cart_optn>div{
+        margin-left: 10px;
+    }
+
+    .cart_optn>div>p{
+        font-weight: 200;
+    }
+    
+    .rem_buttom{
+        border: 1px solid white;
+        border-radius: 7px;
+        height: 25px;
+        background-color: rgba(3, 3, 3, 0.925);
+        color: white;
+        font-size: 15px;
+    }
+
+    .rating_star{
+        width: 50px;
+    }
+
+    .l_line{
+        border: 1px solid ;
+        border-width: 1px 0px 0px 0px;
+        border-color: gray;
+        width: 400px;
+        margin-top: 20px;
+    }
+    /* .second1>div{
+        border: 1px solid teal;
+    } */
+
+    .second1>#deli1,#deli2,#deli3{
+        display: flex; height: 35px;
+    }
+    .txt_color{
+        color: #00e9bf;
+    }
+    .pin{
+        text-decoration: none;
+        color: #00e9bf;
+    }
+    .sec1a>h2{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    #deli1{
+        margin-top: 20px;
+    }
+    #deli2{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #deli3{
+        margin-top: 20px;
+    }
+    #deli1>div{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%; 
+        border:1px solid white;
+        margin: 4px 0 0 3px ;
+    }
+    #deli2>div{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%; 
+        border:1px solid white;
+        margin: 4px 0 0 3px ;
+    }
+    #deli3>.div1,.div2,.div3{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%; 
+        border:1px solid white;
+        margin: 4px 0 0 3px ;
+    }
+    #deli1>.deli_img{
+        border-radius: 0%;
+        width: 30px;
+        height: auto;
+        border: 0px;
+        margin-left: 7px;
+    }
+    #deli2>.deli_img{
+        border-radius: 0%;
+        width: 30px;
+        height: auto;
+        border: 0px;
+        margin-left: 7px;
+    }
+    #deli3>.deli_img{
+        border-radius: 0%;
+        width: 30px;
+        height: auto;
+        margin-left: 7px;
+    }
+    .anchorAnthrStore{
+        color: #00e9bf;
+        font-size: 12px;
+    }
+
+    .mrp{
+        font-weight: 100;
+        font-size: 10px;
+    }
+    .mrp_str{
+        font-weight: 100;
+        font-size: 11px;
+        text-decoration: line-through;
+    }
+    .price_line{
+        border: 0.5px solid grey;
+        color: grey;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .pay{
+        display: flex;
+        align-items: center;
+    }
+    .right{
+        margin-left: 50%;
+        text-align: right;
+    }
+    .right1{
+        margin-left: 20%;
+        /* margin-right: 10px; */
+        text-align: right;
+    }
+    .ancr{
+        text-decoration: none;
+        color: #00e9bf;
+    }
+    .second2>div{
+        height: 30px;
+    }
+    .solid_line{
+        border: 0.2px solid grey;
+        width: 95%;
+        height: 0px;
+        padding: -10px;
+    }
+    .checkout_btn{
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: #00e9bf;
+        width: 80px;
+        height: 30px;
+        margin-top: 20px;
+    }
+    </style>
+    
+    
+
+</head>
+<body>
+    <!-- // Navbar HTML Part starts here -->
+<!-- Main Navbar Starts Here -->
+  <div id="navbar1">
+    <div id="box1">
+      <!-- <div><a href="/"><video id="video1"src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4" ></video></a></div> -->
+      <div>
+        <a class="logo custom-s logo croma-desktop-logo" data-testid="Logo" href="/index.html">
+          <video id="video1" controls autoplay loop muted>
+            <source
+              src="https://media.croma.com/video/upload/v1648185258/Croma%20Assets/UI%20Assets/IPL_logo/Croma_IPL_Logo.mp4"
+              type="video/mp4">
+            <source src="movie.mp4" type="video/mp4">
+
+          </video></a>
+
+      </div>
+      <div id="menu">
+
+        <a id="menu1" href=""><span><i class="fa-solid fa-bars"></i></a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content"
+            style="position: absolute; z-index: 999; overflow: scroll; height: 600px; width: 250px;">
+            <a href="mobile.html">Mobiles</a>
+            <a href="television.html">Televisions & Accessories</a>
+            <a href="">Laptops</a>
+            <a href="">Phones and Wearables</a>
+            <a href="">Kitchen Appliances</a>
+            <a href="">Audio & Fitness</a>
+            <a href="">Gromming & Personal Care</a>
+            <a href="">Cameras & Accessories</a>
+            <a href="">Smart Devices</a>
+            <a href="">Gaming</a>
+            <a href="">Acees sories</a>
+            <a href="">Top Brands</a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div><input id="search" type="search" placeholder="What are you looking for? "></div>
+    </div>
+    <div id="box2">
+      <div id="map">
+        <div id="map1"><i class="fa-solid fa-location-dot"></i></div>
+        <div> Mumbai,400049</div>
+        <div id="pen"><i class="fa-solid fa-pencil"></i></div>
+      </div>
+      <div id="user">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a id="cart" href="cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Main Navbar Ends Here -->
+ <!-- Navbar HTML Part ends here -->
+    
+    <div id="top">
+        <div class="top1">
+            <h1>YOUR CART</h1>
+        </div>
+        <div class="top2">
+            <div class="topfirst">
+                
+    
+                <div class="top2b">
+                    <div class="img_persent">
+                        <img id="percent_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcttqYl_9LVt13oHENHG_Y_rxKer7aq08Kk938PDWDzc1r3nM" alt="persentage">
+                    </div>
+                    <h3 style="padding: 0px -10px 2px 2px;">APPLY COUPON</h3>
+                    
+                </div>
+    
+                <div class="top2c">
+                    <div class="b1">
+                    </div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                </div>
+
+                
+            </div>
+
+            <div class="topsecond">
+                <div class="second1">
+                    <div class="sec1a">
+                        <h2>Delivery options for <a class="pin" href="">400049</a> <a class="txt_color" href="">Change</a> </h2>
+                    </div>
+                    
+                    <div id="deli1" >
+                        <div class="div1"><div style="width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%; 
+                                    border:1px solid white;
+                                    background-color:  teal;
+                                    margin: 3px  "></div>
+                         </div>
+                         <div class="deli_img"><img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637828519/Croma%20Assets/UI%20Assets/Standard-Delivery-Black-Theme.svg/mxw_1440,f_auto" alt="sd"></div>
+                        <h5 style="margin: auto;
+                                margin-left: 13px;">Standard Delivery</h5>
+                    </div>
+                    
+                    <div id="deli2">
+                        <div class="div2"><div style="width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            padding: 5px;"></div></div>
+                        <div class="deli_img"><img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637828617/Croma%20Assets/UI%20Assets/Store_Pickup_Black_Theme.svg/mxw_1440,f_auto" alt="pickup"></div>
+                        <h5 style="margin: auto;
+                                margin-left: 13px;">Available For Pickup Croma, Croma Sion</h5>
+                    </div>
+                    
+                    <div id="deli3">
+                        <div class="div3"><div style="width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            padding: 5px;"></div></div>
+                        <div class="deli_img"><img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637828675/Croma%20Assets/UI%20Assets/Zip_Delivery_Black_Theme.svg/mxw_1440,f_auto" alt="free"></div>
+                        <h5 style="margin: auto;
+                        margin-left: 13px;">Free ZIP Delivery by 9:00 PM </h5>
+                    </div>
+
+                    <div><a class="anchorAnthrStore"href="">Select Another Store</a></div>
+                </div>
+                <div class="second2">
+                    <div>
+                        <h3>Payment Details</h3></div>
+                    <div class="pay">
+                            <div><p>Item total</p></div>
+                            <div class="right" id="r1">
+                                <!-- ammend here -->
+                            </div>
+                    </div>
+                    <div class="pay">
+                         <div>
+                             <p>Delivery cost at<a class="ancr" href="">400049</a></p>
+                         </div>
+                         <div class="right1">
+                             <p>Free</p></div>
+                    </div>
+                    <div style="margin-bottom: -20px;">
+                        <hr width="90%">
+                    </div>
+                    <div class="pay">
+                        <div >
+                            <p>Total Price</p>
+                        </div>
+                        <div class="right" id="r2">
+                            <!-- ammend -->
+                        </div>
+                    </div>
+                    <div>
+                        <button class="checkout_btn" onclick="window.location.href = 'checkout.html';">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Footer sections starts here -->
+  <footer>
+    <div id="footermain">
+      <div>
+        <div>
+          <p class="fh">CONNECT WITH US</p>
+        </div>
+        <div id="inp">
+          <input type="email" placeholder="Enter Email ID" id="footinp">
+          <button id="footbtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+
+        <div id="logoCollector">
+          <a href="https://www.youtube.com/user/CromaRetail"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/CromaRetail/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/croma.retail/"><i class="fa-brands fa-instagram-square"></i></a>
+          <a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/cromaretail?s=11"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p id="copyright">© Copyright 2021 Croma. All rights reserved</p>
+
+      </div>
+      <div class="footerline">
+        <div></div>
+      </div>
+      <div>
+        <div>
+          <p class="fh">USEFUL LINKS</p>
+        </div>
+        <div class="list">
+          <div><a href="https://www.croma.com/about-croma">About Croma</a></div>
+          <div><a href="https://www.croma.com/lp-croma-e-care">E-Care</a></div>
+          <div><a href="https://www.croma.com/helpAndSupport">Help And Support</a></div>
+          <div><a href="https://www.croma.com/franchise-opportunity">Franchise Opportunity</a></div>
+          <div><a href="https://www.croma.com/faq">FAQs</a></div>
+          <div><a href="https://www.croma.com/site-map">Site MAP</a></div>
+          <div><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></div>
+          <div><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></div>
+          <div><a
+              href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">Bulk
+              Enquiry</a></div>
+          <div><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></div>
+          <div><a href="https://www.croma.com/store?location=default">Store Locator</a></div>
+          <div><a href="https://www.croma.com/disclaimer">Disclaimer</a></div>
+          <div><a href="https://www.croma.com/delightful-programmes">Delightful Programmes</a></div>
+          <div><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></div>
+        </div>
+
+      </div>
+      <div class="footerline">
+        <div></div>
+      </div>
+      <div>
+        <div>
+          <p class="fh">PRODUCTS</p>
+        </div>
+        <div class="list">
+          <div><a href="https://www.croma.com/televisions-accessories/c/997">Telivisions & Accessories</a></div>
+          <div><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></div>
+          <div><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></div>
+          <div><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></div>
+          <div><a href="https://www.croma.com/phones-wearables/c/1">Phones and Wearables</a></div>
+          <div><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></div>
+          <div><a href="https://www.croma.com/computers-tablets/c/3">Computers and Tablets</a></div>
+          <div><a href="https://www.croma.com/gaming/c/7">Gaming</a></div>
+          <div><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></div>
+          <div><a href="https://www.croma.com/accessories/c/8">Accessories</a></div>
+          <div><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></div>
+          <div><a href="https://www.croma.com/top-brands/c/topbrands">Top Brands</a></div>
+          <div><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+  <!-- Footer sections ends here -->
+</body>
+</html>
+
+<script>
+
+    var productArr= JSON.parse(localStorage.getItem("cart"));
+    console.log(productArr)
+
+    productArr.map(function (elem, index){
+    var img = document.createElement("img");
+    img.src = elem.imgUrl;
+
+    var name = document.createElement("p");
+    name.textContent = elem.itemName;
+
+    var price =document.createElement("p");
+    price.textContent = "$ "+elem.itemPrice;
+
+    var stricked_price =document.createElement("p");
+    stricked_price = "MRP $ "+elem.strikedOffPrice;
+
+    var total = productArr.reduce(function (sum, elem, index, arr) {
+    return sum + Number(elem.itemPrice);
+  }, 0);
+
+  var length = productArr.length;
+//   console.log(length);
+
+    //script for payment details
+    var item_total=`$ ${total}`
+    document.querySelector("#r1").innerText=item_total;
+    document.querySelector("#r2").innerText=item_total;
+
+    var box_crtOption= document.createElement("div");
+    box_crtOption.setAttribute("class","cart_optn");
+    
+    // for cart options
+    var box_crtOption1=document.createElement("div");
+    var box_crtOption2=document.createElement("div");
+    var box_crtOption3=document.createElement("div");
+    var box_crtOption4=document.createElement("div");
+    var box_crtOption5=document.createElement("div");
+
+    var option1= document.createElement("p");
+    option1.textContent= "Free Delivery by 6 April 2022";
+    box_crtOption1.append(option1);
+
+    var option3= document.createElement("p");
+    option3.textContent= "Free Zip Delivery by 1:00 PM \n tomorrow";
+    box_crtOption3.append(option3);
+
+    var option5= document.createElement("p");
+    option5.textContent= "Pickup at Store";
+    box_crtOption5.append(option5);
+
+    box_crtOption.append(box_crtOption1,box_crtOption2,box_crtOption3,box_crtOption4,box_crtOption5);
+    
+        //for star image
+    var star=document.createElement("img");
+    star.setAttribute(
+    "src",
+    "https://pacouriers.uk/stars-4.png"
+  );
+  star.setAttribute("class","rating_star");
+
+    var imageDiv=document.createElement("div");
+  var imageDiv1=document.createElement("div");
+  imageDiv1.setAttribute("class","b1img");
+  imageDiv1.append(img);
+
+    var qtty= document.createElement("p");
+    qtty.setAttribute("class","b1qty");
+    qtty.textContent= "Qty: 1";
+    var qtyDiv1=document.createElement("div");
+    qtyDiv1.append(qtty);
+
+    imageDiv.append(imageDiv1,qtyDiv1);
+
+    document.querySelector(".b1").append(imageDiv);
+    document.querySelector(".b2").append(name,star,box_crtOption );
+    // cart option ended
+    
+    
+
+    var rem_but=document.createElement("button");
+    rem_but.innerText = "Remove";
+    rem_but.setAttribute("class","rem_buttom");
+    rem_but.addEventListener("click", function () {
+      removeItem(elem, index);
+    });
+
+    document.querySelector(".b2").append(rem_but);
+
+    var last_line= document.createElement("div");
+    last_line.setAttribute("class","l_line");
+    document.querySelector(".b2").append(last_line);
+
+    //for price coloumn
+    var b3Div=document.createElement("div");
+    b3Div.setAttribute("class","divForB3");
+
+    var pCol1= document.createElement("div");
+    pCol1.append(price);
+    b3Div.append(pCol1);
+
+    var pCol2 = document.createElement("div");
+    var pCol2a= document.createElement("p");
+    pCol2a.textContent="(Incl. all Taxes)";
+    pCol2a.setAttribute("class","mrp");
+    pCol2.append(pCol2a);
+    b3Div.append(pCol2);
+
+    var pCol3 = document.createElement("div");
+    pCol3.setAttribute("class","price_line");
+    b3Div.append(pCol3);
+
+    var pCol4 = document.createElement("div");
+    pCol4.append(stricked_price);
+    pCol4.setAttribute("class","mrp_str");
+    b3Div.append(pCol4);
+
+    var pCol5 = document.createElement("div");
+    pCol5.setAttribute("class","price_line");
+    b3Div.append(pCol5);
+
+    document.querySelector(".b3").append(b3Div)
+
+
+    // //for payment details
+    // var pay1= document.createElement("div");
+    // var pay1a= document.createElement("p");
+    // pay1a.textContent="Payment Details";
+    // pay1.append(pay1a);
+
+
+    // var pay2= document.createElement("div");
+    // pay2.setAttribute("class","pay");
+    //     var pay2a= document.createElement("div");
+    //     var pay2a1= document.createElement("p");
+    //     pay2a1.textContent="Item total";
+    //     pay2a.append(pay2a1);
+
+    //     var pay2b= document.createElement("div");
+    //     pay2b.setAttribute("class","right");
+    //     var t1="$ "+total;
+    //     pay2b.append(t1);
+    // pay2.append(pay2a,pay2b);
+
+
+    // var pay3= document.createElement("div");
+    // pay3.setAttribute("class","pay");
+    //     var pay3a= document.createElement("div");
+    //     pay3a.setAttribute("class","pay");
+    //     var pay3a1=document.createElement("p");
+    //     pay3a1.textContent="Delivery cost at";
+    //     var pay3a2=document.createElement("a");
+    //     pay3a2.textContent="400049";
+    //     pay3a2.setAttribute("href","");
+    //     pay3a2.setAttribute("class","ancr");
+    //     pay3a.append(pay3a1,pay3a2);
+
+    //     var pay3b= document.createElement("div");
+    //     pay3b.setAttribute("class","right1");
+    //     var pay3b1=document.createElement("p");
+    //     pay3b1.textContent="Free";
+    //     pay3b.append(pay3b1);
+    // pay3.append(pay3a,pay3b);
+
+    // var pay4= document.createElement("div");
+    //     var pay4a= document.createElement("div");
+    //     pay4a.setAttribute("class","solid_line");
+    //     pay4.append(pay4a);
+    
+
+    // var pay5= document.createElement("div");
+    //     pay5.setAttribute("class","pay");
+    //     var pay5a= document.createElement("div");
+    //     var pay5a1= document.createElement("p");
+    //     pay5a1.textContent="Total price";
+    //     pay5a.append(pay5a1);
+
+    //     var pay5b= document.createElement("div");
+    //     pay5b.setAttribute("class","right");
+    //     var t2="$ "+total;
+    //     pay5b.append(t2);
+    // pay5.append(pay5a,pay5b);
+
+
+    // var pay6= document.createElement("div");
+
+   
+    // document.querySelector(".second2").append(pay1);
+    // document.querySelector(".second2").append(pay2);
+    // document.querySelector(".second2").append(pay3);
+    // document.querySelector(".second2").append(pay4);
+    // document.querySelector(".second2").append(pay5);
+
+    
+
+
+    });
+
+    function removeItem(elem, index) {
+    console.log(elem, index);
+    productArr.splice(index, 1);
+    console.log(productArr);
+    localStorage.setItem("cart", JSON.stringify(productArr));
+    window.location.reload();
+  }
+
+    
+  //Navbar js script starts here
+function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+//Navbar js script ends here
+  </script>
