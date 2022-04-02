@@ -1,0 +1,121 @@
+#footermain{
+    /* border: 1px solid red; */
+    background-color: rgb(29,29,29);
+    color: white;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    margin-top: 20px;
+
+    padding-bottom: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+}
+#footermain>div{
+    /* border: 1px solid red; */
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.fh{
+    font-weight: bolder;
+    margin-bottom: 40px;
+    margin-left: -20px;
+}
+
+#footinp{
+    margin-top: 0px;
+    padding: 5px;
+    font-size: 20px;
+    height: 100%;
+    border: 0;
+    width: 70%;
+    outline: none;
+    
+}
+.footerline{
+    /* border: 1px solid black; */
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerline>div{
+    border: 0.2px solid white;
+    width: 0px;
+    height: 100%;
+}
+.list{
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* border: 1px solid black; */
+    gap: 15px;
+    margin-top: -20px;
+}
+.list>div{
+    /* border: 1px solid black; */
+    
+    padding-right: 10%;
+}
+.list a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.list a:hover{
+    color: teal;
+}
+#logoCollector{
+    padding: 3%;
+}
+#logoCollector>a{
+    font-size: 25px;
+    margin-right: 20px;
+    color: white;
+}
+#logoCollector>a:nth-child(1):hover{
+    color: red;
+}
+
+#logoCollector>a:nth-child(2):hover{
+    color: rgb(24,119,242);
+}
+
+#logoCollector>a:nth-child(3):hover{
+    color: rgb(233,64,70);
+}
+
+#logoCollector>a:nth-child(4):hover{
+    color: rgb(29,155,240);
+}
+
+#logoCollector>a:nth-child(5):hover{
+    color: rgb(29,155,240);
+}      
+#footbtn{
+    /* border: 1px solid red; */
+    border: none;
+    background-color: white;
+    padding: 5px;
+    margin-left: 10px;
+    color: gray;
+    
+}
+#inp{
+    
+    /* border: 1px solid orange; */
+    padding: 5px 0px 5px 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: -20px;
+}
+#footbtn:hover{
+    cursor: pointer;
+}
+#copyright{
+    font-weight: lighter;
+}
