@@ -5,6 +5,10 @@ Croma is an Indian retail chain of consumer electronics and durables run by Infi
 
 ============================================================================================
 
+Our Blog Page : https://medium.com/the-better-life/building-clone-of-e-commerce-site-croma-a41fb04767ec
+
+============================================================================================
+
 Tech Stacks Used:
 1. HTML - 75%
 2. CSS - 13%
